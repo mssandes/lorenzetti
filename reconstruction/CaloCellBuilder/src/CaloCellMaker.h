@@ -15,7 +15,7 @@ class CaloCellMaker : public Gaugi::Algorithm
     /** Destructor **/
     ~CaloCellMaker()=default;
     
-    /*! initialize the algorithm **/
+    /*! initialize the algorithm **/ 
     virtual StatusCode initialize() override;
     /*! Book all histograms into the current storegate **/
     virtual StatusCode bookHistograms( SG::EventContext &ctx ) const override;
