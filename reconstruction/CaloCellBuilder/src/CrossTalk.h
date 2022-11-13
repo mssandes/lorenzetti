@@ -9,7 +9,7 @@
 #include "TRandom3.h"
 
 using namespace std ;
-
+using namespace TMath ;
 
 class CrossTalk : public Gaugi::AlgTool
 {
