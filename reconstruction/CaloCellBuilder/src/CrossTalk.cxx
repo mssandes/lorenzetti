@@ -153,7 +153,7 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
     vectorTau_0.push_back( m_tau_0 ) ;
 
     BuildRelativeCluster( BaseAmpXTc, BaseAmpXTl, BaseAmpXTr, RelativeAmpXTc, RelativeAmpXTl, RelativeAmpXTr, nPhi, nEta ) ;
-    //BuildSampCluster(RelativeAmpXTc, RelativeAmpXTl, delayPerCell, SampRelatClusXTc, SampRelatClusXTl, CellSigSamples, SampClusNoise, m_Nsamples, m_tau_0 ) ;
+    //BuildSampCluster(RelativeAmpXTc, RelativeAmpXTl, RelativeAmpXTr, delayPerCell, SampRelatClusXTc, SampRelatClusXTl, SampRelatClusXTr, CellSigSamples, SampClusNoise, m_Nsamples, m_tau_0 ) ;
     //OFcoeffs( AmpCoeff, TimeCoeff ) ;
     
     MSG_INFO("We find number of cells "<<cells_around.size() );
