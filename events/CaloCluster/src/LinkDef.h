@@ -11,4 +11,8 @@
 #pragma link C++ struct xAOD::CaloCluster_t+;
 #pragma link C++ class std::vector< xAOD::CaloCluster_t >+;
 
+#pragma link C++ struct xAOD::CaloClusterXT_t+;
+#pragma link C++ class std::vector< xAOD::CaloClusterXT_t >+;
+
+
 #endif
