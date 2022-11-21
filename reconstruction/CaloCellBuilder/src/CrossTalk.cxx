@@ -79,7 +79,7 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
       MSG_FATAL("It's not possible to retrieve the CaloDetDescriptorCollection using this key: " << m_collectionKey);
     }
 
-    std::vector<xAOD::CaloDetDescriptor*> cells_around ,
+    vector<xAOD::CaloDetDescriptor*> cells_around ,
                                           cluster ;
     vector<double> BaseAmpXTc ,
                    BaseAmpXTl ,
@@ -107,7 +107,7 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
       float deltaEta = std::abs( hotcell->eta() - cell->eta() ) ;
       float deltaPhi = std::abs( CaloPhiRange::fix( hotcell->phi() - cell->phi() ) ) ;
       if (cell == hotcell){
-        cluster->push_back(cell) ;
+        cluster.push_back(cell) ;
         BaseAmpXTc.push_back( m_AmpXt_C*cell->e() ) ;
         BaseAmpXTl.push_back( m_AmpXt_L*cell->e() ) ;
         BaseAmpXTr.push_back( m_AmpXt_R*cell->e() ) ;
@@ -130,6 +130,7 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
 
       if( deltaEta < nEta*cell->deltaEta()/2 && deltaPhi < nPhi*cell->deltaPhi()/2 ){
         cells_around.push_back(cell) ;
+        cluster.push_back(cell) ;
         BaseAmpXTc.push_back( m_AmpXt_C*cell->e() ) ;
         BaseAmpXTl.push_back( m_AmpXt_L*cell->e() ) ;
         BaseAmpXTr.push_back( m_AmpXt_R*cell->e() ) ;
