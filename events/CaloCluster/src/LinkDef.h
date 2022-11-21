@@ -1,6 +1,7 @@
 
 
 #include "CaloCluster/CaloClusterConverter.h"
+#include "CaloCluster/CaloClusterXTConverter.h"
 
 #ifdef __CINT__
 
