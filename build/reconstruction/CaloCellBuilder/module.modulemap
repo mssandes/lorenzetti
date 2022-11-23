@@ -1,0 +1,11 @@
+module "CaloCellBuilder" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCellMaker.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCellMaker.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCellMerge.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCellMerge.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloHitMaker.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloHitMaker.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloHitMerge.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloHitMerge.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CrossTalk.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CrossTalk.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/OptimalFilter.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/OptimalFilter.h" export * }
+  export *
+}
+

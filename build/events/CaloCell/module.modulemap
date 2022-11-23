@@ -1,0 +1,12 @@
+module "CaloCell" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCell.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCell.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCellContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCellContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCellConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloCellConverter.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptor.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptor.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptorCollection.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptorCollection.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptorConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/CaloDetDescriptorConverter.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/enumeration.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCell/CaloCell/enumeration.h" export * }
+  export *
+}
+

@@ -1,0 +1,4 @@
+[ libDetectorATLASModel.so ]
+# List of selected classes
+class DetectorATLASConstruction
+header src/DetectorATLASConstruction.h

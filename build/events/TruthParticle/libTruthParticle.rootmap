@@ -1,0 +1,9 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libTruthParticle.so ]
+# List of selected classes
+class vector<xAOD::TruthParticle_t>
+class xAOD::TruthParticle_t
+header TruthParticle/TruthParticleConverter.h

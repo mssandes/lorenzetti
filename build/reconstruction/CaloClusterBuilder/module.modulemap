@@ -1,0 +1,7 @@
+module "CaloClusterBuilder" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloClusterBuilder/src/CaloClusterMaker.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloClusterBuilder/src/CaloClusterMaker.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloClusterBuilder/src/ShowerShapes.h" { header "/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloClusterBuilder/src/ShowerShapes.h" export * }
+  export *
+}
+

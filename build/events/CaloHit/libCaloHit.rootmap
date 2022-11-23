@@ -1,0 +1,9 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libCaloHit.so ]
+# List of selected classes
+class vector<xAOD::CaloHit_t>
+class xAOD::CaloHit_t
+header CaloHit/CaloHitConverter.h

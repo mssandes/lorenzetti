@@ -1,0 +1,8 @@
+module "EventInfo" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfo.h" { header "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfo.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfoContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfoContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfoConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/EventInfo/EventInfo/EventInfoConverter.h" export * }
+  export *
+}
+

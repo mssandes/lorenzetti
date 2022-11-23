@@ -1,0 +1,6 @@
+module "DetectorATLASModel" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/geometry/DetectorATLASModel/src/DetectorATLASConstruction.h" { header "/home/marton.sandes/lzt/lorenzetti/geometry/DetectorATLASModel/src/DetectorATLASConstruction.h" export * }
+  export *
+}
+

@@ -1,0 +1,4 @@
+[ libCaloClusterBuilder.so ]
+# List of selected classes
+class CaloClusterMaker
+header src/CaloClusterMaker.h

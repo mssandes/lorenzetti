@@ -1,0 +1,16 @@
+[ libCaloCellBuilder.so ]
+# List of selected classes
+class CaloCellMaker
+class CaloCellMerge
+class CaloHitMaker
+class CaloHitMerge
+class CrossTalk
+class OptimalFilter
+class PulseGenerator
+header src/CaloCellMaker.h
+header src/CaloCellMerge.h
+header src/CaloHitMaker.h
+header src/CaloHitMerge.h
+header src/CrossTalk.h
+header src/OptimalFilter.h
+header src/PulseGenerator.h

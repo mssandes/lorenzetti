@@ -1,0 +1,12 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libCaloCluster.so ]
+# List of selected classes
+class vector<xAOD::CaloClusterXT_t>
+class vector<xAOD::CaloCluster_t>
+class xAOD::CaloClusterXT_t
+class xAOD::CaloCluster_t
+header CaloCluster/CaloClusterXTConverter.h
+header CaloCluster/CaloClusterConverter.h

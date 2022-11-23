@@ -1,0 +1,4 @@
+[ libCaloRingerBuilder.so ]
+# List of selected classes
+class CaloRingerMaker
+header src/CaloRingerMaker.h

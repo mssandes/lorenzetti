@@ -1,0 +1,5 @@
+module "PileupMergeBuilder" {
+  requires cplusplus
+  export *
+}
+

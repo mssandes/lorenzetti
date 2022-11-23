@@ -1,0 +1,4 @@
+[ libPileupMergeBuilder.so ]
+# List of selected classes
+class PileupMerge
+header src/PileupMerge.h

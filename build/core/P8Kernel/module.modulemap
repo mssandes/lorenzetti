@@ -1,0 +1,12 @@
+module "P8Kernel" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/Algorithm.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/Algorithm.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/Event.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/Event.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/EventGenerator.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/EventGenerator.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/EventReader.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/EventReader.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/IAlgorithm.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/IAlgorithm.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/ParticleFilter.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/ParticleFilter.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/exceptions.h" { header "/home/marton.sandes/lzt/lorenzetti/core/P8Kernel/P8Kernel/exceptions.h" export * }
+  export *
+}
+

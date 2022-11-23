@@ -1,0 +1,19 @@
+{ decls }
+namespace generator {  }
+
+[ libPythiaGenerator.so ]
+# List of selected classes
+class generator::BoostedEvents
+class generator::FixedRegion
+class generator::JF17
+class generator::LLPGun
+class generator::ParticleGun
+class generator::Pileup
+class generator::Zee
+header src/BoostedEvents.h
+header src/FixedRegion.h
+header src/JF17.h
+header src/LLPGun.h
+header src/ParticleGun.h
+header src/Pileup.h
+header src/Zee.h

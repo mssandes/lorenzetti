@@ -1,0 +1,8 @@
+[ libG4Kernel.so ]
+# List of selected classes
+class CaloPhiRange
+class PrimaryGenerator
+class RunManager
+header G4Kernel/CaloPhiRange.h
+header G4Kernel/PrimaryGenerator.h
+header G4Kernel/RunManager.h

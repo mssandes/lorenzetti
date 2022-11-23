@@ -1,0 +1,10 @@
+{ decls }
+namespace Gaugi {  }
+
+[ libGaugiKernel.so ]
+# List of selected classes
+class Gaugi::ComponentAccumulator
+class IMsgService
+class MsgService
+header GaugiKernel/ComponentAccumulator.h
+header GaugiKernel/MsgStream.h

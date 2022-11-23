@@ -1,0 +1,22 @@
+module "CaloCluster" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloCluster.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloCluster.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterConverter.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXT.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXT.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTConverter.h" export * }
+  export *
+}
+
+module "CaloClusterXT" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloCluster.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloCluster.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterConverter.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXT.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXT.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloCluster/CaloCluster/CaloClusterXTConverter.h" export * }
+  export *
+}
+

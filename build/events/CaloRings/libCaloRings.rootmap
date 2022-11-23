@@ -1,0 +1,9 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libCaloRings.so ]
+# List of selected classes
+class vector<xAOD::CaloRings_t>
+class xAOD::CaloRings_t
+header CaloRings/CaloRingsConverter.h

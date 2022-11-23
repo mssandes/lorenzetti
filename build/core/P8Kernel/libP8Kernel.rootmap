@@ -1,0 +1,11 @@
+{ decls }
+namespace generator {  }
+
+[ libP8Kernel.so ]
+# List of selected classes
+class generator::Algorithm
+class generator::EventGenerator
+class generator::EventReader
+header P8Kernel/Algorithm.h
+header P8Kernel/EventGenerator.h
+header P8Kernel/EventReader.h

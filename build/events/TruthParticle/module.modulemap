@@ -1,0 +1,8 @@
+module "TruthParticle" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticle.h" { header "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticle.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticleContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticleContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticleConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/TruthParticle/TruthParticle/TruthParticleConverter.h" export * }
+  export *
+}
+

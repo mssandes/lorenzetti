@@ -1,0 +1,9 @@
+module "CaloHit" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHit.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHit.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitCollection.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitCollection.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloHit/CaloHit/CaloHitConverter.h" export * }
+  export *
+}
+

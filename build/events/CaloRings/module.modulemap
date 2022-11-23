@@ -1,0 +1,8 @@
+module "CaloRings" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRings.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRings.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRingsContainer.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRingsContainer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRingsConverter.h" { header "/home/marton.sandes/lzt/lorenzetti/events/CaloRings/CaloRings/CaloRingsConverter.h" export * }
+  export *
+}
+

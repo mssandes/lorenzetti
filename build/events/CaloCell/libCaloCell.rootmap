@@ -1,0 +1,12 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libCaloCell.so ]
+# List of selected classes
+class vector<xAOD::CaloCell_t>
+class vector<xAOD::CaloDetDescriptor_t>
+class xAOD::CaloCell_t
+class xAOD::CaloDetDescriptor_t
+header CaloCell/CaloCellConverter.h
+header CaloCell/CaloDetDescriptorConverter.h

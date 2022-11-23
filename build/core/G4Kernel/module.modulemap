@@ -1,0 +1,16 @@
+module "G4Kernel" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/ActionInitialization.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/ActionInitialization.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/Analysis.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/Analysis.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/CaloPhiRange.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/CaloPhiRange.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/EventAction.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/EventAction.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/PrimaryGenerator.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/PrimaryGenerator.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/PrimaryGeneratorAction.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/PrimaryGeneratorAction.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunAction.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunAction.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunManager.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunManager.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunReconstruction.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/RunReconstruction.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/SteppingAction.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/SteppingAction.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/constants.h" { header "/home/marton.sandes/lzt/lorenzetti/core/G4Kernel/G4Kernel/constants.h" export * }
+  export *
+}
+

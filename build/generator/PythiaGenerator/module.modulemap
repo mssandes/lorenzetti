@@ -1,0 +1,12 @@
+module "PythiaGenerator" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/BoostedEvents.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/BoostedEvents.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/FixedRegion.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/FixedRegion.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/JF17.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/JF17.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/LLPGun.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/LLPGun.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/ParticleGun.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/ParticleGun.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/Pileup.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/Pileup.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/Zee.h" { header "/home/marton.sandes/lzt/lorenzetti/generator/PythiaGenerator/src/Zee.h" export * }
+  export *
+}
+

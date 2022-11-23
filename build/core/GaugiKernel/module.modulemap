@@ -1,0 +1,21 @@
+module "GaugiKernel" {
+  requires cplusplus
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/AlgTool.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/AlgTool.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Algorithm.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Algorithm.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Collection.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Collection.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/ComponentAccumulator.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/ComponentAccumulator.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/DataHandle.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/DataHandle.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/DataVector.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/DataVector.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/EDM.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/EDM.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/IAlgTool.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/IAlgTool.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/IAlgorithm.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/IAlgorithm.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/MsgStream.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/MsgStream.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Property.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Property.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/StatusCode.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/StatusCode.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/StoreGate.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/StoreGate.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Timer.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/Timer.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/defines.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/defines.h" export * }
+  module "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/macros.h" { header "/home/marton.sandes/lzt/lorenzetti/core/GaugiKernel/GaugiKernel/macros.h" export * }
+  export *
+}
+

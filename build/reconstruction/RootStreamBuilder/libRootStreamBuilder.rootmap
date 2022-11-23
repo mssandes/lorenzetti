@@ -1,0 +1,12 @@
+[ libRootStreamBuilder.so ]
+# List of selected classes
+class RootStreamAODMaker
+class RootStreamESDMaker
+class RootStreamESDReader
+class RootStreamHITMaker
+class RootStreamHITReader
+header src/RootStreamAODMaker.h
+header src/RootStreamESDMaker.h
+header src/RootStreamESDReader.h
+header src/RootStreamHITMaker.h
+header src/RootStreamHITReader.h

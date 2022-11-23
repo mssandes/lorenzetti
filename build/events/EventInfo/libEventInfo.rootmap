@@ -1,0 +1,9 @@
+{ decls }
+namespace std {  }
+namespace xAOD {  }
+
+[ libEventInfo.so ]
+# List of selected classes
+class vector<xAOD::EventInfo_t>
+class xAOD::EventInfo_t
+header EventInfo/EventInfoConverter.h
