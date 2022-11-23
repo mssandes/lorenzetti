@@ -16,6 +16,9 @@ CrossTalk::CrossTalk( std::string name ) :
   declareProperty( "MinEnergy"       , m_minEnergy=1*GeV          );
   declareProperty( "CollectionKey"   , m_collectionKey="CaloDetDescriptorCollection"  ); // input
   declareProperty( "HistogramPath"   , m_histPath="Clusters"             );
+  declareProperty( "AmpXTc"          , m_ampXTc             );
+  declareProperty( "AmpXTl"          , m_ampXTl             );
+  declareProperty( "AmpXTr"          , m_ampXTr             );
 }
 
 //!=====================================================================
@@ -81,6 +84,9 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
 
     vector<xAOD::CaloDetDescriptor*> cells_around ,
                                           cluster ;
+
+    //vector<xAOD::CaloClusterXT*> clusterXT ;
+
     vector<double> BaseAmpXTc ,
                    BaseAmpXTl ,
                    BaseAmpXTr ,
@@ -157,6 +163,10 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
     //BuildSampCluster(RelativeAmpXTc, RelativeAmpXTl, RelativeAmpXTr, delayPerCell, SampRelatClusXTc, SampRelatClusXTl, SampRelatClusXTr, CellSigSamples, SampClusNoise, m_Nsamples, m_tau_0 ) ;
     //OFcoeffs( AmpCoeff, TimeCoeff ) ;
     
+/*     clusterXT.ampXTc = RelativeAmpXTc ;
+    clusterXT.ampXTl = RelativeAmpXTl ;
+    clusterXT.ampXTr = RelativeAmpXTr ; */
+
     MSG_INFO("We find number of cells "<<cells_around.size() );
     //auto pulse = hotcell->pulse();
     for( unsigned sample=0; sample < cells_around[0]->pulse().size(); ++sample) {

@@ -1,7 +1,7 @@
 E=100
 Emin=10
 Emax=150
-nEvents=25000
+nEvents=5
 
 v=$(date +"%Y%m%d_%Hh%Mm%Ss")
 

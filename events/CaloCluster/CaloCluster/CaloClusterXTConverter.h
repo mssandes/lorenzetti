@@ -8,7 +8,7 @@
 
 namespace xAOD{
 
-   // typedef std::map<const xAOD::CaloClusterXT*, int> cluster_links_t;
+    typedef std::map<const xAOD::CaloClusterXT*, int> clusterXT_links_t;
 
     struct CaloClusterXT_t{
         float e;
@@ -17,30 +17,30 @@ namespace xAOD{
         float phi;
         float deta;
         float dphi;
-        float e0;
-        float e1;
-        float e2;
-        float e3;
-        float ehad1;
-        float ehad2;
-        float ehad3;
+//        float e0;
+//        float e1;
+//        float e2;
+//        float e3;
+//        float ehad1;
+//        float ehad2;
+//        float ehad3;
         float etot;
         float e233;
         float e237;
         float e277;
-        float emaxs1;
-        float emaxs2;
-        float e2tsts1;
+//        float emaxs1;
+//        float emaxs2;
+//        float e2tsts1;
         float reta;
         float rphi;
         float rhad;
         float rhad1;
         float eratio;
-        float f0;
-        float f1;
-        float f2;
-        float f3;
-        float weta2;
+//        float f0;
+//        float f1;
+//        float f2;
+//        float f3;
+//        float weta2;
         std::vector<double> ampXTc;
         std::vector<double> ampXTl;
         std::vector<double> ampXTr;

@@ -4,6 +4,7 @@ file(GLOB_RECURSE HEADERS src/PileupMergeMaker.h )
 
 include_directories(${CMAKE_SOURCE_DIR} ${ROOT_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../events/CaloCluster)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../events/CaloClusterXT)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../events/CaloCell)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../events/CaloHit)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../events/EventInfo)
