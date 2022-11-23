@@ -90,11 +90,11 @@ namespace xAOD{
       PRIMITIVE_SETTER_AND_GETTER( float, m_weta2, setWeta2, weta2 );
 
       /*! XT_C */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<float> , m_ampXTc, setAmpXTc, ampXTc );
+      //PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTc, setAmpXTc, ampXTc );
       /*! XT_L */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<float> , m_ampXTl, setAmpXTl, ampXTl );
+      //PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTl, setAmpXTl, ampXTl );
       /*! XT_R */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<float> , m_ampXTr, setAmpXTr, ampXTr );
+      //PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTr, setAmpXTr, ampXTr );
 
       /*! Add the calorimeter cell into the RoI collection */
       void push_back( const xAOD::CaloCell * );
@@ -138,6 +138,9 @@ namespace xAOD{
       float m_phi;
       float m_deta;
       float m_dphi;
+//      double m_ampXTc ;
+//      double m_ampXTl ;
+//      double m_ampXTr ;
 
       
       /* All calo cells into the roi window */

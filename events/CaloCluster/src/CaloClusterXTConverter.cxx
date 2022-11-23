@@ -1,5 +1,5 @@
 
-#include "CaloCluster/CaloClusterConverterXT.h"
+#include "CaloCluster/CaloClusterXTConverter.h"
 //#include "G4Kernel/macros.h"
 
 
@@ -40,9 +40,9 @@ bool CaloClusterXTConverter::convert( const CaloClusterXT *clus, CaloClusterXT_t
       clus_t.f2          = clus->f2();
       clus_t.f3          = clus->f3();
       clus_t.weta2       = clus->weta2();
-      clus_t.ampXTc      = clus->ampXTc();
-      clus_t.ampXTl      = clus->ampXTl();
-      clus_t.ampXTr      = clus->ampXTr();
+      //clus_t.ampXTc      = clus->ampXTc();
+      //clus_t.ampXTl      = clus->ampXTl();
+      //clus_t.ampXTr      = clus->ampXTr();
 
       
       for(auto &cell : clus->cells())

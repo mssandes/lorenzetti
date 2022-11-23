@@ -1,13 +1,26 @@
+E=100
+Emin=10
+Emax=150
+nEvents=25000
 
-E=$1
+v=$(date +"%Y%m%d_%Hh%Mm%Ss")
 
-mkdir -p electrons/HIT
-mkdir -p electrons/ESD
-mkdir -p electrons/EVT
-mkdir -p electrons/AOD
+fileName="single_e_$Emin""_$Emax""GeV_$v"
+#fileName="single_e_$nEvents""evts_$var"
+current_path="./runs/$fileName"
+# current_path="./runs/$pathName"
+# var=`date`
 
-cd electrons/EVT
-prun_events.py -c "gen_electron.py -e $E -s 0" -mt 40 --nov 1000 -o electrons.EVT.root -m
+mkdir -p $current_path/HIT
+mkdir -p $current_path/ESD
+mkdir -p $current_path/EVT
+mkdir -p $current_path/AOD
+
+cd $current_path/EVT
+
+#prun_events.py -c "gen_electron.py -e $E -s 0" -mt 40 --nov 1000 -o electrons.EVT.root -m
+prun_events.py -c "gen_electron.py --energy_min $Emin --energy_max $Emax -s 0" -mt 40 --nov $nEvents -o electrons.EVT.root -m
+
 cd ../HIT
 simu_trf.py -i ../EVT/electrons.EVT.root -o electrons.HIT.root -nt 40 --enableMagneticField
 # digitalization

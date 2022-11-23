@@ -8,16 +8,14 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../core/G4Kernel)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../CaloCell)
 
 ROOT_GENERATE_DICTIONARY(CaloClusterDict ${HEADERS} LINKDEF ${CMAKE_CURRENT_SOURCE_DIR}/src/LinkDef.h  MODULE CaloCluster)
-                                      
+
 add_library(CaloCluster  OBJECT ${SOURCES} CaloClusterDict.cxx)
 install(FILES ${HEADERS}  DESTINATION CaloCluster)
 gaugi_install_python_modules( ${CMAKE_CURRENT_SOURCE_DIR}/python CaloCluster)
 
+ROOT_GENERATE_DICTIONARY(CaloClusterXTDict ${HEADERS} LINKDEF ${CMAKE_CURRENT_SOURCE_DIR}/src/LinkDef.h  MODULE CaloClusterXT)
 
-
-
-
-
-
-
+add_library(CaloClusterXT  OBJECT ${SOURCES} CaloClusterXTDict.cxx)
+install(FILES ${HEADERS}  DESTINATION CaloClusterXT)
+gaugi_install_python_modules( ${CMAKE_CURRENT_SOURCE_DIR}/python CaloClusterXT)
 
