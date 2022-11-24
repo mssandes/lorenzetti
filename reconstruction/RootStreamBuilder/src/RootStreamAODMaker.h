@@ -13,10 +13,7 @@
 #include "GaugiKernel/Algorithm.h"
 #include "GaugiKernel/DataHandle.h"
 
-
-
-class RootStreamAODMaker : public Gaugi::Algorithm
-{
+class RootStreamAODMaker : public Gaugi::Algorithm{
 
   public:
     /** Constructor **/
@@ -40,10 +37,7 @@ class RootStreamAODMaker : public Gaugi::Algorithm
     
     virtual StatusCode finalize() override;
 
-
-
   private:
- 
 
     StatusCode serialize( SG::EventContext &ctx ) const;
 

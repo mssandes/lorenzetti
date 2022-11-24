@@ -29,7 +29,7 @@ namespace xAOD{
         float e237;
         float e277;
 //        float emaxs1;
-//        float emaxs2;
+        float emaxs2;
 //        float e2tsts1;
         float reta;
         float rphi;
@@ -41,9 +41,9 @@ namespace xAOD{
 //        float f2;
 //        float f3;
 //        float weta2;
-        std::vector<double> ampXTc;
-        std::vector<double> ampXTl;
-        std::vector<double> ampXTr;
+        std::vector<double> relatClusXTc;
+        std::vector<double> relatClusXTl;
+        std::vector<double> relatClusXTr;
         std::vector<int> cell_links;
     };
 
@@ -57,7 +57,6 @@ namespace xAOD{
             bool convert(const CaloClusterXT *, CaloClusterXT_t & , cell_links_t &);
 
         private:
-
     };
 }
 #endif

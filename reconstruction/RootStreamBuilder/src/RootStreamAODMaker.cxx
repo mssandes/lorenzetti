@@ -16,11 +16,8 @@
 #include "RootStreamAODMaker.h"
 #include "GaugiKernel/EDM.h"
 
-
 using namespace SG;
 using namespace Gaugi;
-
-
 
 RootStreamAODMaker::RootStreamAODMaker( std::string name ) : 
   IMsgService(name),
@@ -218,7 +215,6 @@ StatusCode RootStreamAODMaker::serialize( EventContext &ctx ) const
       cnv.convert( par, par_t );
       container_truth->push_back(par_t);
     }
-  
   }
 
   {// serialize cluster
@@ -283,11 +279,9 @@ StatusCode RootStreamAODMaker::serialize( EventContext &ctx ) const
       MSG_WARNING("It's not possible to read the xAOD::CaloClusterXTContainer from this Context using this key " << m_inputClusterXTKey );
       return StatusCode::SUCCESS;
     }
-
     int clusterXT_link = 0;
     for (const auto &clusXT : **container.ptr() )
     {
-
       if(m_dumpCells){
 
         int cell_link=0;
@@ -316,7 +310,6 @@ StatusCode RootStreamAODMaker::serialize( EventContext &ctx ) const
           }
         }
       }
-
       clusterXT_links[clusXT] = clusterXT_link; // decorate the cluster since is used by rings
       xAOD::CaloClusterXT_t clusXT_t;
       xAOD::CaloClusterXTConverter cnv;

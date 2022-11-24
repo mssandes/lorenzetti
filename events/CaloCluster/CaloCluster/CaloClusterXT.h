@@ -1,7 +1,6 @@
 #ifndef CaloClusterXT_h
 #define CaloClusterXT_h
 
-
 /** simulator includes **/
 #include "CaloCell/CaloCell.h"
 #include "GaugiKernel/EDM.h"
@@ -12,7 +11,6 @@
 
 /** standard includes **/
 #include <vector>
-
 
 // Event Object Data
 namespace xAOD{
@@ -57,7 +55,7 @@ namespace xAOD{
       /*! set/get max energy (first eletromagnetic layer) */
 //      PRIMITIVE_SETTER_AND_GETTER( float, m_emaxs1, setEmaxs1, emaxs1 );
       /*! set/get max energy (second eletromagnetic layer) */
-//      PRIMITIVE_SETTER_AND_GETTER( float, m_emaxs2, setEmaxs2, emaxs2 );
+      PRIMITIVE_SETTER_AND_GETTER( float, m_emaxs2, setEmaxs2, emaxs2 );
       /*!  get second maximum energy in sampling 1 (strip layer) */
 //      PRIMITIVE_SETTER_AND_GETTER( float, m_e2tsts1, setE2tsts1, e2tsts1 );
       /*! set/get total energy in all layer */
@@ -90,11 +88,11 @@ namespace xAOD{
 //      PRIMITIVE_SETTER_AND_GETTER( float, m_weta2, setWeta2, weta2 );
 
       /*! XT_C */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTc, setAmpXTc, ampXTc );
+      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_relatClusXTc, setRelatXTc, relatClusXTc );
       /*! XT_L */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTl, setAmpXTl, ampXTl );
+      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_relatClusXTl, setRelatXTl, relatClusXTl );
       /*! XT_R */
-      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_ampXTr, setAmpXTr, ampXTr );
+      PRIMITIVE_SETTER_AND_GETTER( std::vector<double> , m_relatClusXTr, setRelatXTr, relatClusXTr );
 
       /*! Add the calorimeter cell into the RoI collection */
       void push_back( const xAOD::CaloCell * );
@@ -126,7 +124,7 @@ namespace xAOD{
       float m_e237;
       float m_e277;
 //      float m_emaxs1;
-//      float m_emaxs2;
+      float m_emaxs2;
 //      float m_e2tsts1;
       float m_reta;
       float m_rphi;
@@ -139,9 +137,9 @@ namespace xAOD{
 //      float m_f3;
 //      float m_weta2;
 
-      std::vector<double> m_ampXTc ;
-      std::vector<double> m_ampXTl ;
-      std::vector<double> m_ampXTr ;
+      std::vector<double> m_relatClusXTc ;
+      std::vector<double> m_relatClusXTl ;
+      std::vector<double> m_relatClusXTr ;
       /* All calo cells into the roi window */
       std::vector<const xAOD::CaloCell*> m_container;
   };

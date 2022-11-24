@@ -99,7 +99,7 @@ namespace ROOT {
       ::RootStreamAODMaker *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::RootStreamAODMaker));
       static ::ROOT::TGenericClassInfo 
-         instance("RootStreamAODMaker", "src/RootStreamAODMaker.h", 18,
+         instance("RootStreamAODMaker", "src/RootStreamAODMaker.h", 16,
                   typeid(::RootStreamAODMaker), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &RootStreamAODMaker_Dictionary, isa_proxy, 4,
                   sizeof(::RootStreamAODMaker) );

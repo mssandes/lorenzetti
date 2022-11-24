@@ -1,6 +1,8 @@
 #include "CrossTalk.h"
 #include "CaloCell/CaloDetDescriptor.h"
+#include "CaloCluster/CaloClusterXT.h"
 #include "CaloCell/CaloDetDescriptorCollection.h"
+#include "CaloCluster/CaloClusterXTContainer.h"
 #include "G4Kernel/CaloPhiRange.h"
 #include "G4Kernel/constants.h"
 #include "G4SystemOfUnits.hh"
@@ -13,12 +15,12 @@ CrossTalk::CrossTalk( std::string name ) :
   IMsgService(name),
   AlgTool()
 {
-  declareProperty( "MinEnergy"       , m_minEnergy=1*GeV          );
+  declareProperty( "MinEnergy"       , m_minEnergy=1*GeV           );
   declareProperty( "CollectionKey"   , m_collectionKey="CaloDetDescriptorCollection"  ); // input
-  declareProperty( "HistogramPath"   , m_histPath="Clusters"             );
-  declareProperty( "AmpXTc"          , m_ampXTc             );
-  declareProperty( "AmpXTl"          , m_ampXTl             );
-  declareProperty( "AmpXTr"          , m_ampXTr             );
+  declareProperty( "HistogramPath"   , m_histPath="ClustersXT"     );
+  //declareProperty( "RelAmpXTc"       , m_relatClusXTc              );
+  //declareProperty( "RelAmpXTl"       , m_relatClusXTl              );
+  //declareProperty( "RelAmpXTr"       , m_relatClusXTr              );
 }
 
 //!=====================================================================
@@ -34,19 +36,19 @@ StatusCode CrossTalk::initialize()
   return StatusCode::SUCCESS;
 }
 
-/* //!=====================================================================
+//!=====================================================================
 StatusCode CrossTalk::bookHistograms( SG::EventContext &ctx ) const
 {
   auto store = ctx.getStoreGateSvc();
 
   store->mkdir( m_histPath );  
   store->add( new TH1F("cl_e_xt"        , ";Count;E_{XT};"      , 100,-10*GeV,10*GeV ) );
-  store->add( new TH1F("cl_tau0"        , ";Count;#tau_{0};"    , 100, -1.5 , 1.5 ) );
+//  store->add( new TH1F("cl_tau0"        , ";Count;#tau_{0};"    , 100, -1.5 , 1.5 ) );
   store->add( new TH1F("cl_etaCluster"  , ";Count;#eta;"        , 100, -3.2 , 3.2 ) );
   store->add( new TH1F("cl_phiCluster"  , ";Count;#phi;"        , 100, -3.2 , 3.2 ) );
 
-  store->add( new TH1F("cl_AmpCoeff"    , ";Count;E_{rec};"     , 100, -1.5 , 1.5 ) );
-  store->add( new TH1F("cl_TimeCoeff"   , ";Count;#tau;"        , 100, -1.5 , 1.5 ) );
+//  store->add( new TH1F("cl_AmpCoeff"    , ";Count;E_{rec};"     , 100, -1.5 , 1.5 ) );
+//  store->add( new TH1F("cl_TimeCoeff"   , ";Count;#tau;"        , 100, -1.5 , 1.5 ) );
 
   store->add( new TH1F("vectorTau_0"    , ";Count;vectorTau_0;"  , 100, 0 , 1.0 ) );
   store->add( new TH1F("delayPerCell"   , ";Count;delayPerCell;" , 100, 0 , 3.2 ) );
@@ -57,10 +59,11 @@ StatusCode CrossTalk::bookHistograms( SG::EventContext &ctx ) const
   store->add( new TH1F("SampClusNoise"  , ";Count;SampClusNoise;"  , 100,-0.08*GeV,0.08*GeV ) );
   store->add( new TH1F("SampRelClusXTc" , ";Count;SampRelClusXTc;" , 100,-10*GeV,10*GeV ) );
   store->add( new TH1F("SampRelClusXTl" , ";Count;SampRelClusXTl;" , 100,-10*GeV,10*GeV ) );
-  store->add( new TH1F("CellSigSamples" , ";Count;CellSigSamples;" , 100,-10*GeV,10*GeV ) );
+  store->add( new TH1F("SampRelClusXTr" , ";Count;SampRelClusXTr;" , 100,-10*GeV,10*GeV ) );
+//  store->add( new TH1F("CellSigSamples" , ";Count;CellSigSamples;" , 100,-10*GeV,10*GeV ) );
 
   return StatusCode::SUCCESS;
-} */
+}
 
 
 //!=====================================================================
@@ -169,10 +172,10 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
 
     MSG_INFO("We find number of cells "<<cells_around.size() );
     //auto pulse = hotcell->pulse();
-    for( unsigned sample=0; sample < cells_around[0]->pulse().size(); ++sample) {
+/*     for( unsigned sample=0; sample < cells_around[0]->pulse().size(); ++sample) {
       
       MSG_INFO("Cell information "<<cells_around[0]->pulse()[sample] );
-    }
+    } */
     
     // With cells_around and hotcell , we can apply the crosstalk logic.
     // NOTE: at this point we can modify all objects (CaloDet) since 
@@ -180,13 +183,6 @@ StatusCode CrossTalk::execute( SG::EventContext &ctx, Gaugi::EDM *edm ) const
 
   }
 
-  return StatusCode::SUCCESS;
-}
-
-//!=====================================================================
-
-StatusCode CrossTalk::finalize()
-{
   return StatusCode::SUCCESS;
 }
 
@@ -463,3 +459,10 @@ void CrossTalk::BuildRelativeCluster( vector<double> &BaseAmpXTc, vector<double>
     }
   }
 }// end of function
+
+//!=====================================================================
+
+StatusCode CrossTalk::finalize()
+{
+  return StatusCode::SUCCESS;
+}

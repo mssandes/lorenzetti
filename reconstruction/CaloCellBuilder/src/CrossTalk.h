@@ -11,22 +11,20 @@
 using namespace std ;
 using namespace TMath ;
 
-class CrossTalk : public Gaugi::AlgTool
-{
+class CrossTalk : public Gaugi::AlgTool{
 
   public:
     /** Constructor **/
     CrossTalk( std::string name );
     virtual ~CrossTalk();
     virtual StatusCode initialize() override;
-    //virtual StatusCode bookHistograms( SG::EventContext &ctx ) const;    
+    virtual StatusCode bookHistograms( SG::EventContext &ctx ) const;    
     virtual StatusCode execute( SG::EventContext &ctx, Gaugi::EDM * ) const override;
     //virtual StatusCode fillHistograms( SG::EventContext &ctx ) const ;
     virtual StatusCode finalize() override;
 
   private:
 
-    double Heaviside(double x) const ;
     double CellFunction(double x, bool type) const ;
     double XTalk(double x, bool type) const ;
     double FindMax( vector<double> myVector, uint& idx ) const ;

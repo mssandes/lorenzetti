@@ -22,7 +22,7 @@ bool CaloClusterXTConverter::convert( const CaloClusterXT *clus, CaloClusterXT_t
       clus_t.e237        = clus->e237();
       clus_t.e277        = clus->e277();
 //      clus_t.emaxs1      = clus->emaxs1();
-//      clus_t.emaxs2      = clus->emaxs2();
+      clus_t.emaxs2      = clus->emaxs2();
 //      clus_t.e2tsts1     = clus->e2tsts1();
       clus_t.reta        = clus->reta();
       clus_t.rphi        = clus->rphi();
@@ -34,9 +34,9 @@ bool CaloClusterXTConverter::convert( const CaloClusterXT *clus, CaloClusterXT_t
 //      clus_t.f2          = clus->f2();
 //      clus_t.f3          = clus->f3();
 //      clus_t.weta2       = clus->weta2();
-      clus_t.ampXTc      = clus->ampXTc();
-      clus_t.ampXTl      = clus->ampXTl();
-      clus_t.ampXTr      = clus->ampXTr();
+      clus_t.relatClusXTc = clus->relatClusXTc();
+      clus_t.relatClusXTl = clus->relatClusXTl();
+      clus_t.relatClusXTr = clus->relatClusXTr();
 
       
       for(auto &cell : clus->cells())

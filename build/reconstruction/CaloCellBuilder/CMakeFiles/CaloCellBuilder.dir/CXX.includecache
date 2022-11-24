@@ -210,6 +210,24 @@ GaugiKernel/Collection.h
 
 ../events/CaloCell/CaloCell/enumeration.h
 
+../events/CaloCluster/CaloCluster/CaloClusterXT.h
+CaloCell/CaloCell.h
+../events/CaloCluster/CaloCluster/CaloCell/CaloCell.h
+GaugiKernel/EDM.h
+../events/CaloCluster/CaloCluster/GaugiKernel/EDM.h
+GaugiKernel/macros.h
+../events/CaloCluster/CaloCluster/GaugiKernel/macros.h
+globals.hh
+../events/CaloCluster/CaloCluster/globals.hh
+vector
+-
+
+../events/CaloCluster/CaloCluster/CaloClusterXTContainer.h
+CaloCluster/CaloClusterXT.h
+../events/CaloCluster/CaloCluster/CaloCluster/CaloClusterXT.h
+GaugiKernel/DataVector.h
+../events/CaloCluster/CaloCluster/GaugiKernel/DataVector.h
+
 ../events/CaloHit/CaloHit/CaloHit.h
 CaloCell/enumeration.h
 ../events/CaloHit/CaloHit/CaloCell/enumeration.h
@@ -421,8 +439,12 @@ CrossTalk.h
 /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CrossTalk.h
 CaloCell/CaloDetDescriptor.h
 /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCell/CaloDetDescriptor.h
+CaloCluster/CaloClusterXT.h
+/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCluster/CaloClusterXT.h
 CaloCell/CaloDetDescriptorCollection.h
 /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCell/CaloDetDescriptorCollection.h
+CaloCluster/CaloClusterXTContainer.h
+/home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CaloCluster/CaloClusterXTContainer.h
 G4Kernel/CaloPhiRange.h
 /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/G4Kernel/CaloPhiRange.h
 G4Kernel/constants.h

@@ -1166,9 +1166,12 @@ reconstruction/CaloCellBuilder/CMakeFiles/CaloCellBuilder.dir/src/CrossTalk.cxx.
  ../core/GaugiKernel/GaugiKernel/StoreGate.h
  ../core/GaugiKernel/GaugiKernel/defines.h
  ../core/GaugiKernel/GaugiKernel/macros.h
+ ../events/CaloCell/CaloCell/CaloCell.h
  ../events/CaloCell/CaloCell/CaloDetDescriptor.h
  ../events/CaloCell/CaloCell/CaloDetDescriptorCollection.h
  ../events/CaloCell/CaloCell/enumeration.h
+ ../events/CaloCluster/CaloCluster/CaloClusterXT.h
+ ../events/CaloCluster/CaloCluster/CaloClusterXTContainer.h
  /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CrossTalk.cxx
  /home/marton.sandes/lzt/lorenzetti/reconstruction/CaloCellBuilder/src/CrossTalk.h
  /opt/geant4/source/externals/clhep/include/CLHEP/Units/PhysicalConstants.h
