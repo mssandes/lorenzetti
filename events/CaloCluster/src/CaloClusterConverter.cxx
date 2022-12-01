@@ -2,10 +2,7 @@
 #include "CaloCluster/CaloClusterConverter.h"
 //#include "G4Kernel/macros.h"
 
-
 using namespace xAOD;
-
-
 
 bool CaloClusterConverter::convert( const CaloCluster *clus, CaloCluster_t &clus_t , cell_links_t &cell_links )
 {
@@ -40,13 +37,14 @@ bool CaloClusterConverter::convert( const CaloCluster *clus, CaloCluster_t &clus
       clus_t.f2          = clus->f2();
       clus_t.f3          = clus->f3();
       clus_t.weta2       = clus->weta2();
-
+      clus_t.relatClusXTc = clus->relatClusXTc();
+      clus_t.relatClusXTl = clus->relatClusXTl();
+      clus_t.relatClusXTr = clus->relatClusXTr();
       
       for(auto &cell : clus->cells())
       {
         clus_t.cell_links.push_back( cell_links[cell] );
       }
-      
 
       return true;
   }
