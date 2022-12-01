@@ -42,11 +42,12 @@ namespace xAOD{
         float f3;
         float weta2;
         std::vector<int> cell_links;
+        std::vector<double> relatClusXTc;
+        std::vector<double> relatClusXTl;
+        std::vector<double> relatClusXTr;
     };
 
-
     class CaloClusterConverter{
-
         public:
             CaloClusterConverter()=default;
             ~CaloClusterConverter()=default;
@@ -54,11 +55,9 @@ namespace xAOD{
             // convert a class object into a struct
             bool convert(const CaloCluster *, CaloCluster_t & , cell_links_t &);
 
-
         private:
 
     };
 }
 #endif
-
 
